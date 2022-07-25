@@ -1,4 +1,4 @@
-
+#merge try
 module Calculation
 
 	def add
