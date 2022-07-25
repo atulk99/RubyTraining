@@ -1,5 +1,7 @@
+
 module Calculation
-	def Calculation.add
+
+	def add
 		puts "Enter two numbers: "
 		num1=gets.chomp.to_i
 	
@@ -8,7 +10,7 @@ module Calculation
 		puts "#{num1} + #{num2} = #{num1+num2}"
 	end
 
-	def Calculation.subt
+	def subt
 		puts "Enter two numbers: "
 		num1=gets.chomp.to_i
 	
@@ -17,7 +19,7 @@ module Calculation
 		puts "#{num1} - #{num2} = #{num1-num2}"
 	end
 
-	def Calculation.mult
+	def mult
 		puts "Enter two numbers: "
 		num1=gets.chomp.to_i
 	
@@ -25,7 +27,7 @@ module Calculation
 		puts "#{num1} * #{num2} = #{num1*num2}"
 	end
 
-	def Calculation.div
+	def div
 		puts "Enter two numbers: "
 		num1=gets.chomp.to_i
 	
@@ -34,6 +36,12 @@ module Calculation
 		puts "#{num1} / #{num2} = #{num1/num2}"
 	end
 end
+
+class Operations
+	include Calculation
+end
+
+obj=Operations.new
 
 while true do
 	puts "Select the operation like 'addition', 'subtract', 'multiply' or 'divide': "
@@ -44,13 +52,14 @@ while true do
 		break
 
 	elsif var=="addition"
-		Calculation.add()
+		obj.add()
 	elsif var=="subtract"
-		Calculation.subt()
+		obj.subt()
 	elsif var=="multiply"
-		Calculation.mult()
+		obj.mult()
 	elsif var=="divide"
-		Calculation.div()
+		obj.div()
 	end
 
 end
+
